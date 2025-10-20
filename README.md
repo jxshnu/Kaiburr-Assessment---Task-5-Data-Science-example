@@ -20,25 +20,47 @@ The solution uses Python, scikit-learn for modeling, NLTK for preprocessing, and
 ## Results
 Model comparison (based on test set; actual values depend on full dataset run):
 
-| Model                     | Accuracy | F1-macro |
-|---------------------------|----------|----------|
-| Logistic Regression       | 0.7582   | 0.7521   |
-| Multinomial Naive Bayes   | 0.7124   | 0.7089   |
-| Linear SVC                | 0.7845   | **0.7793** |
 
-**Best Model**: Linear SVC (highest F1-macro, robust to imbalance).
+Model Comparison Summary:
+                         Accuracy  F1-macro
+Logistic Regression      0.909288  0.798836
+Multinomial Naive Bayes  0.862470  0.707958
+Linear SVC               0.908971  0.782500
+
+Best performing model based on F1-macro: Logistic Regression
+
+
 
 ### Visual Results
 - Class Distribution:
   ![Class Distribution](images/class_distribution.png)
 - Confusion Matrix for Linear SVC:
   ![Confusion Matrix](images/confusion_matrix.png)
-- Classification Report:
-  ![Classification Report](images/classification_report.png)
+  Classification Report:
+                                    precision    recall  f1-score   support
+
+Credit reporting, repair, or other       0.92      0.95      0.93    161456
+                   Debt collection       0.88      0.84      0.86     74326
+                     Consumer Loan       0.79      0.28      0.42      1892
+                          Mortgage       0.92      0.93      0.92     26967
+
+                          accuracy                           0.91    264641
+                         macro avg       0.88      0.75      0.78    264641
+                      weighted avg       0.91      0.91      0.91    264641
 - Sample Predictions:
-  ![Prediction Output](images/prediction_output.png)
-- Execution History:
-  ![Execution History](images/history.png)
+ Predictions on example complaints:
+Complaint: My credit report has errors that are affecting my score and I can't get them fixed....
+Predicted Category: Credit reporting, repair, or other
+
+Complaint: The debt collector is harassing me with calls about a debt I don't owe....
+Predicted Category: Debt collection
+
+Complaint: I took out a personal loan and the interest rates are higher than promised....
+Predicted Category: Credit reporting, repair, or other
+
+Complaint: The bank is foreclosing on my home without proper notice....
+Predicted Category: Mortgage
+
 
 ## How to Run
 1. Download the dataset from [CFPB Consumer Complaint Database](https://www.consumerfinance.gov/data-research/consumer-complaints/) and save as `complaints.csv` in the project root.
