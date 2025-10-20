@@ -37,20 +37,9 @@ Best performing model based on F1-macro: Logistic Regression
 - Confusion Matrix for Linear SVC:
   ![Confusion Matrix](images/confusion_matrix.png)
   Classification Report:
-                                    precision    recall  f1-score   support
-
-Credit reporting, repair, or other       0.92      0.95      0.93    161456
-                   Debt collection       0.88      0.84      0.86     74326
-                     Consumer Loan       0.79      0.28      0.42      1892
-                          Mortgage       0.92      0.93      0.92     26967
-
-                          accuracy                           0.91    264641
-                         macro avg       0.88      0.75      0.78    264641
-                      weighted avg       0.91      0.91      0.91    264641
+  ![Confusion Matrix](images/class_rep.png)
 - Sample Predictions:
- Predictions on example complaints:
-Complaint: My credit report has errors that are affecting my score and I can't get them fixed....
-Predicted Category: Credit reporting, repair, or other
+  ![Confusion Matrix](images/pred.png)
 
 Complaint: The debt collector is harassing me with calls about a debt I don't owe....
 Predicted Category: Debt collection
