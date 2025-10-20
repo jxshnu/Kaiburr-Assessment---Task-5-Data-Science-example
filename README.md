@@ -21,14 +21,7 @@ The solution uses Python, scikit-learn for modeling, NLTK for preprocessing, and
 Model comparison (based on test set; actual values depend on full dataset run):
 
 
-Model Comparison Summary:
-                         Accuracy  F1-macro
-Logistic Regression      0.909288  0.798836
-Multinomial Naive Bayes  0.862470  0.707958
-Linear SVC               0.908971  0.782500
-
-Best performing model based on F1-macro: Logistic Regression
-
+![Class Distribution](images/Screenshot.png)
 
 
 ### Visual Results
